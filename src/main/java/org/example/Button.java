@@ -19,12 +19,10 @@ public class Button {
     public static void main(String[] args) {
         Button button = new Button();
 
-        // Демонстрация работы кнопки
         button.click(); // 1
         button.click(); // 2
         button.click(); // 3
 
-        // Проверка количества нажатий
         System.out.println("Общее количество нажатий: " + button.getClickCount());
     }
 }

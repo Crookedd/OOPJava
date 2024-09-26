@@ -15,7 +15,7 @@ public class ButtonTest {
 
     @Test
     public void testInitialClickCount() {
-        // Проверяем, что начальное количество нажатий равно 0
+        //в начале ноль
         assertEquals(0, button.getClickCount());
     }
 

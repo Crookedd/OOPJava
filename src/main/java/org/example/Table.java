@@ -77,34 +77,4 @@ public class Table {
         }
     }
 
-    // Пример использования
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        // Запрос размеров таблицы у пользователя
-        System.out.print("Введите количество строк: ");
-        int rows = safeNextInt(scanner);
-        System.out.print("Введите количество столбцов: ");
-        int cols = safeNextInt(scanner);
-
-        Table table = new Table(rows, cols);
-
-        for (int i = 0; i < table.rows(); i++) {
-            for (int j = 0; j < table.cols(); j++) {
-                System.out.printf("Введите значение для ячейки [%d][%d]: ", i, j);
-                int value = safeNextInt(scanner);
-                table.setValue(i, j, value);
-            }
-        }
-
-        // Вывод таблицы и среднего арифметического
-
-        System.out.printf("Таблица [%d x %d]:\n", table.rows(), table.cols());
-        System.out.println(table);
-        System.out.println("Среднее: " + table.average());
-
-        System.out.printf("Значение в ячейке [1][1]: %d\n", table.getValue(1, 1));
-
-        scanner.close();
-    }
 }

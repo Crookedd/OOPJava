@@ -39,22 +39,4 @@ public class Balance {
             return "R";
         }
     }
-
-    public static void main(String[] args) {
-        Balance balance = new Balance();
-
-        // Пример использования
-        balance.addLeft(5);
-        System.out.println(balance.result()); // L
-        balance.addRight(5);
-        System.out.println(balance.result()); // =
-        balance.reset();
-        System.out.println(balance.result()); // =
-        balance.addLeft(5);
-        System.out.println(balance.result()); // L
-        balance.addRight(2);
-        System.out.println(balance.result()); // L
-        balance.reset();
-        System.out.println(balance.result()); // =
-    }
 }

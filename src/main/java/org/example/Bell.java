@@ -14,13 +14,4 @@ public class Bell {
         }
         isDing = !isDing; // Переключаем состояние
     }
-
-    public static void main(String[] args) {
-        Bell bell = new Bell();
-
-        // Пример использования
-        for (int i = 0; i < 10; i++) {
-            bell.sound();
-        }
-    }
 }

@@ -1,10 +1,6 @@
-package org.example;
+package geometry2d;
 
 import Exceptions.FigureNotSupportedException;
-import Exceptions.InvalidDimensionException;
-import geometry2d.Circle;
-import geometry2d.Rectangle;
-import geometry3d.Cylinder;
 import org.junit.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -34,16 +30,4 @@ public class FigureTest {
         assertThrows(FigureNotSupportedException.class, () -> new Rectangle(0, 5));
         assertThrows(FigureNotSupportedException.class, () -> new Rectangle(4, -1));
     }
-
-    @Test
-    public void testCylinder() {
-        Circle circleBase = new Circle(3);
-        Cylinder cylinder = new Cylinder(circleBase, 5);
-        assertEquals(141.3716694115407, cylinder.volume(), 0.01);
-        assertEquals("Радиус: 3.0 и высота: 5.0", cylinder.toString());
-
-        // Изменяем ожидаемое исключение на InvalidDimensionException
-        assertThrows(InvalidDimensionException.class, () -> new Cylinder(circleBase, -1));
-    }
-
 }

@@ -2,10 +2,9 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 
 public class OddEvenSeparator {
-    private List<Integer> numbers;
+    private final List<Integer> numbers;
 
     public OddEvenSeparator() {
         numbers = new ArrayList<>();

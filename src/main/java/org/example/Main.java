@@ -4,9 +4,6 @@ import Exceptions.FigureNotSupportedException;
 import geometry2d.Circle;
 import geometry2d.Rectangle;
 import geometry3d.Cylinder;
-
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 import static org.example.Table.safeNextInt;

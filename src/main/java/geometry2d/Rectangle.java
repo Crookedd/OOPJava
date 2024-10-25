@@ -4,8 +4,8 @@ import Exceptions.FigureNotSupportedException;
 
 // Класс Rectangle
 public class Rectangle implements Figure {
-    private double width;
-    private double height;
+    private final double width;
+    private final double height;
 
     public Rectangle(double width, double height) {
         if (width <= 0 || height <= 0) {

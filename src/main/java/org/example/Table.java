@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 
 public class Table {
-    private int[][] data;
-    private int rows;
-    private int cols;
+    private final int[][] data;
+    private final int rows;
+    private final int cols;
 
     // Конструктор инициализации таблицы
     public Table(int rows, int cols) {
@@ -54,16 +54,14 @@ public class Table {
     // Вернуть среднее арифметическое всех значений таблицы
     public double average() {
         int sum = 0;
-        int count = 0;
 
         for (int i = 0; i < rows; i++) {
             for (int j = 0; j < cols; j++) {
                 sum += data[i][j];
-                count++;
             }
         }
 
-        return count == 0 ? 0 : (double) sum / count; // Избегаем деления на ноль
+        return (double) sum / rows / cols;
     }
 
     public static int safeNextInt(Scanner scanner) {

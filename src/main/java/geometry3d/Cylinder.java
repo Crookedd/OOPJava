@@ -4,10 +4,13 @@ import Exceptions.InvalidDimensionException;
 import geometry2d.Figure;
 
 public class Cylinder {
-    private Figure base; // Основание цилиндра
-    private double height; // Высота цилиндра
+    private final Figure base; // Основание цилиндра
+    private final double height; // Высота цилиндра
 
     public Cylinder(Figure base, double height) {
+        if (base == null) {
+            throw new InvalidDimensionException("Основание не может быть нулевым.");
+        }
         if (height <= 0) {
             throw new InvalidDimensionException("Высота должна быть положительным числом.");
         }
@@ -21,6 +24,6 @@ public class Cylinder {
 
     @Override
     public String toString() {
-        return base.toString() + " и высота: " + height;
+        return base + " и высота: " + height;
     }
 }
